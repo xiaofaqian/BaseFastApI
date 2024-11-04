@@ -48,7 +48,7 @@ async def log_requests(request: Request, call_next):
 # 包含路由
 app.include_router(user_router, prefix="/api/v1/users", tags=["users"])
 app.include_router(admin_router, prefix="/api/v1/admin", tags=["admin"])
-# uvicorn app.main:app --host 0.0.0.0 --port 8003 --reload
+# uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8003)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
